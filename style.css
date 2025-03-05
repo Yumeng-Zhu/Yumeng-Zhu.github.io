@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,170 +7,140 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f8f8;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-.wrapper {
+.container {
     display: flex;
     min-height: 100vh;
 }
 
 /* Left-side Navigation */
 .nav-bar {
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Darker blue-gray for a more professional feel */
     color: white;
     width: 250px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 30px;
     position: fixed;
     height: 100%;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-.nav-bar .brand {
-    text-align: center;
+.nav-bar button.nav-toggle {
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: none;
+    display: none;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.nav-bar .brand h1 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.nav-bar .brand p {
-    font-size: 14px;
-    color: #bdc3c7;
-}
-
-.nav-links {
+.nav-bar ul {
+    list-style-type: none;
+    padding-left: 0;
     margin-top: 30px;
-    list-style: none;
-    padding: 0;
 }
 
-.nav-links li {
-    margin: 15px 0;
+.nav-bar ul li {
+    margin: 20px 0;
 }
 
-.nav-links li a {
+.nav-bar ul li a {
     color: #ecf0f1;
-    font-size: 18px;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
     padding: 10px;
     border-radius: 5px;
-    display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links li a:hover {
-    background-color: #3498db;
+.nav-bar ul li a:hover {
+    background-color: #3498db; /* Blue highlight on hover */
     color: white;
 }
 
-.social-links {
-    margin-top: 30px;
-    text-align: center;
+.nav-bar ul li a.active {
+    background-color: #3498db; /* Highlight active link */
+    color: white;
 }
 
-.social-links a {
+.nav-bar ul li a.active:hover {
+    background-color: #2980b9; /* Darker blue on hover when active */
+}
+
+.nav-bar .social-links {
+    margin-top: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar .social-links a {
     color: #ecf0f1;
-    font-size: 16px;
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
+    font-size: 24px;
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.nav-bar .social-links a:hover {
     color: #3498db;
 }
 
 /* Main Content */
 .content {
     margin-left: 250px;
-    padding: 40px;
+    padding: 20px;
     width: calc(100% - 250px);
 }
 
-.intro {
+/* Avatar and Header */
+header {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-.avatar-container {
-    margin-right: 30px;
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+header p {
+    font-size: 20px;
+    color: #777;
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 3px solid #3498db;
-    object-fit: cover;
+    border: 3px solid #333;
 }
 
-.bio {
-    max-width: 600px;
-}
-
-.bio h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.bio p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* Section Styling */
-.about, .projects, .contact {
-    margin-bottom: 40px;
-}
-
-.about h2, .projects h2, .contact h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #3498db;
-}
-
-.about p, .projects ul, .contact p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.projects ul {
-    list-style: none;
-}
-
-.projects ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
     text-align: center;
     font-size: 14px;
     color: #777;
-    margin-top: 50px;
+    padding-top: 20px;
 }
 
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
-    }
-
     .nav-bar {
         width: 100%;
         position: relative;
         height: auto;
+        display: none;
     }
 
     .content {
@@ -178,12 +148,24 @@ footer {
         width: 100%;
     }
 
-    .intro {
-        flex-direction: column;
-        align-items: flex-start;
+    .nav-bar button.nav-toggle {
+        display: block;
     }
 
-    .avatar-container {
-        margin-bottom: 20px;
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 0;
+    }
+
+    .nav-bar ul li a {
+        font-size: 16px;
+    }
+
+    .nav-bar ul.show {
+        display: flex;
     }
 }
