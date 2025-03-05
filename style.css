@@ -35,7 +35,7 @@ body {
 }
 
 .nav-bar button.nav-toggle {
-    background-color: #333;
+    background-color: #272727;
     color: white;
     font-size: 30px;
     border: none;
@@ -87,11 +87,11 @@ header p {
 }
 
 .avatar {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-top: 10px;
-    border: 3px solid #333;
+    border: 3px solid #dbdcff;
 }
 
 section {
@@ -101,7 +101,7 @@ section {
 section h2 {
     font-size: 28px;
     font-weight: 600;
-    color: #333;
+    color: #323335;
     margin-bottom: 10px;
 }
 
@@ -142,7 +142,7 @@ footer {
 @media (max-width: 768px) {
     .nav-bar {
         width: 100%;
-        position: relative;
+        /* position: ; */
         height: auto;
         display: none;
     }
