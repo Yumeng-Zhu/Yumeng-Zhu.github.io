@@ -1,4 +1,8 @@
 /* Global Styles */
+#about p {
+    line-height: 1.5; /* Adjust the number to increase or decrease spacing */
+    margin-bottom: 1.5em;
+}
 * {
     margin: 0;
     padding: 0;
