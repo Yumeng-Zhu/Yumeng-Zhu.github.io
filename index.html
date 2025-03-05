@@ -3,66 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yumeng's Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Your Personal Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .col-avatar {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .col-name h1, .col-name p {
+            margin: 5px 0;
+        }
+
+        .col-name h1 span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .col-name p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .social-links i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .social-links i:hover {
+            color: #BB2222;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .main-bio-container, .main-pub-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .pub-card {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pub-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .pub-card-body h5 {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .pub-card-body h6 {
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .pub-card-body .info a {
+            margin-right: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper">
-        <!-- Left-side Navigation -->
-        <nav class="nav-bar">
-            <div class="brand">
-                <h1>Yumeng Zhu</h1>
-                <p>PhD in Educational Technology</p>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank">CV</a></li>
-            </ul>
-            <div class="social-links">
-                <a href="https://github.com/Yumeng-Zhu" target="_blank">GitHub</a>
-                <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
-            </div>
-        </nav>
+    <div id="main">
+        <div class="main-content">
+            <div id="main-content-container" class="container">
+                <div class="row">
+                    <div class="col-avatar">
+                        <img src="static/image/xiaoyan.jpg" class="avatar" alt="Xiaoyan Cong"/>
+                        <figcaption style="font-size: small;">Gansu Province, China</figcaption>
+                        <figcaption style="font-size: small;">28th June 2024</figcaption>
+                    </div>
+                    <div class="col-name">
+                        <h1 class="name"><span>Xiaoyan Cong 丛箫言</span></h1>
+                        <p class="email">Email: xiaoyan_cong [at] brown [dot] edu</p>
+                        <p class="text">Office: 115 Waterman St, Providence, RI 02906</p>
+                        <p class="text">I am currently a 1st-year CS Ph.D. student at <img src="static/image/brown.png" alt="brown Logo" style="vertical-align: middle; width: auto; height: 20px;"> <a href="https://cs.brown.edu/">Brown University</a>, advised by Prof. <a href="https://cs.brown.edu/people/ssrinath/" target="_blank">Srinath Sridhar</a>.</p>
 
-        <!-- Main Content -->
-        <main class="content">
-            <section class="intro">
-                <div class="avatar-container">
-                    <img src="avatar.jpg" alt="Avatar" class="avatar"> <!-- Replace with actual image path -->
+                        <p class="text">Previously, I obtained my B.E. of Robotics Engineering from <img src="static/image/zju.png" alt="zju Logo" style="vertical-align: middle; width: auto; height: 20px;"> <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> with honors from <a href="http://ckc.zju.edu.cn/ckcen/_t1906/main.psp">Cho Kochen Honors College</a> in 2024.</p>
+
+                        <p>📢 Feel free to contact me if you want to discuss or collaborate!</p>
+                    </div>
                 </div>
-                <div class="bio">
-                    <h2>Hi, I'm Yumeng!</h2>
-                    <p>I'm currently a PhD student at Zhejiang University and a recognized visiting PhD student at the University of Oxford. My research focuses on empowering children through EdTech and using GenAI-based scaffolding tools to support students' project-based learning (PBL) in STEAM.</p>
-                    <p>Graduating in June 2026, I'm actively looking for exciting job opportunities!</p>
+                <div class="social-links">
+                    <i class="fa fa-google"></i><a href="https://Oliver-Cong02.github.io">[Google Scholar]</a>
+                    <i class="fa fa-github"></i><a href="https://github.com/Oliver-Cong02">[Github]</a>
+                    <i class="fa fa-twitter"></i><a href="https://twitter.com/xiaoyan_cong">[Twitter]</a>
+                    <i class="fa fa-file-pdf"></i><a href="static/image/Xiaoyan_Cong_Resume.pdf"> [Curriculum Vitae (Sept 2024)]</a>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section id="about" class="about">
-                <h2>About Me</h2>
-                <p>Welcome to my homepage! Here, I share my journey as a PhD student and my passion for educational technology. I explore ways to make learning more engaging and accessible to students using cutting-edge tools.</p>
-            </section>
-
-            <section id="projects" class="projects">
-                <h2>Projects</h2>
+        <div class="main-more-container">
+            <div class="main-bio-container">
+                <h5 class="subtitle">News 📢</h5>
                 <ul>
-                    <li>This section is currently under construction.</li>
-                    <li>Please find more of my latest publications on my <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN">Google Scholar Homepage</a>.</li>
+                    <li><span style="color:#4e613e">[2024.09] </span> 3 Papers are accepted to NeurIPS 2024!</li>
+                    <li><span style="color:#4e613e">[2024.03] </span> I received the ICLR'2024 travel award, thanks!</li>
+                    <li><span style="color: #0d5797">[2023.10] </span> I was awarded the NeurIPS'2023 scholar award!</li>
                 </ul>
-            </section>
 
-            <section id="contact" class="contact">
-                <h2>Contact</h2>
-                <p>Email: yumeng_zhu@zju.edu.cn | yumeng.zhu21@gmail.com</p>
-                <p>GitHub: <a href="https://github.com/Yumeng-Zhu">Yumeng-Zhu</a></p>
-            </section>
+                <h5 class="subtitle" style="margin-top:30px">Research Interests</h5>
+                <p>My research interests span across <b>Computer Vision</b>, <b>Computer Graphics</b> and <b>Machine Learning</b>, specifically 3D spatiotemporal visual perception, understanding and reasoning of human physical interactions with the world.</p>
+            </div>
+        </div>
 
-            <footer>
-                <p>&copy; 2025 Yumeng. All rights reserved.</p>
-            </footer>
-        </main>
+        <div class="main-more-container">
+            <div id="main-pub-container">
+                <h5 class="subtitle">Publications</h5>
+                <div class="pub-card">
+                    <div class="row">
+                        <div class="col-l">
+                            <img src="static/image/OscillationInversion.png" alt="Oscillation Inversion"/>
+                        </div>
+                        <div class="col-r">
+                            <div class="pub-card-body">
+                                <h5 class="title">OscillationInversion: Understanding the structure of Large Flow Models</h5>
+                                <h6 class="authors"><u>Anonymous</u></h6>
+                                <p class="info">
+                                    <a href="https://Oliver-Cong02.github.io" class="conference">[Under Review]</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more publications here -->
+            </div>
+        </div>
     </div>
 </body>
 </html>
