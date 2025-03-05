@@ -4,57 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumeng's Homepage</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <!-- Left-side Navigation -->
         <nav class="nav-bar">
-            <button class="nav-toggle">☰</button>
-            <ul>
+            <div class="brand">
+                <h1>Yumeng Zhu</h1>
+                <p>PhD in Educational Technology</p>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank">CV</a></li> <!-- Replace with actual CV file -->
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
             </ul>
+            <div class="social-links">
+                <a href="https://github.com/Yumeng-Zhu" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">Google Scholar</a>
+            </div>
         </nav>
 
         <!-- Main Content -->
-        <div class="content center">
-            <header>
-                <h1>Yumeng Zhu</h1>
-                <p>PhD in Educational Technology</p>
-                <img src="avatar.jpg" alt="Avatar" class="avatar"> <!-- Replace with actual image path -->
-            </header>
-            
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Welcome to my homepage! I am currently a PhD student at Zhejiang University and a recognized visiting PhD student at the University of Oxford. My research focuses on empowering children through EdTech and using GenAI-based scaffolding tools to support students' project-based learning (PBL) in STEAM.</p>
-                <p>I will graduate in June 2026 and am actively seeking job opportunities!</p>
+        <main class="content">
+            <section class="intro">
+                <div class="avatar-container">
+                    <img src="avatar.jpg" alt="Avatar" class="avatar"> <!-- Replace with actual image path -->
+                </div>
+                <div class="bio">
+                    <h2>Hi, I'm Yumeng!</h2>
+                    <p>I'm currently a PhD student at Zhejiang University and a recognized visiting PhD student at the University of Oxford. My research focuses on empowering children through EdTech and using GenAI-based scaffolding tools to support students' project-based learning (PBL) in STEAM.</p>
+                    <p>Graduating in June 2026, I'm actively looking for exciting job opportunities!</p>
+                </div>
             </section>
-            
-            <section id="projects">
+
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <p>Welcome to my homepage! Here, I share my journey as a PhD student and my passion for educational technology. I explore ways to make learning more engaging and accessible to students using cutting-edge tools.</p>
+            </section>
+
+            <section id="projects" class="projects">
                 <h2>Projects</h2>
                 <ul>
                     <li>This section is currently under construction.</li>
-                    <!-- <li><a href="#">Interactive Gamebook</a> - A digital storytelling project with interactive elements.</li> -->
-                    <!-- <li><a href="#">Middle School IT Projects</a> - Using AI to assist students in learning.</li>
-                    <li><a href="#">Personal Research</a> - Exploring goal orientation and task value in education.</li> -->
+                    <li>Please find more of my latest publications on my <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN">Google Scholar Homepage</a>.</li>
                 </ul>
             </section>
-            
-            <section id="contact">
+
+            <section id="contact" class="contact">
                 <h2>Contact</h2>
-                <p>Please find out more latest publications on my<a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN">Google Scholar Homepage.</a></p>
                 <p>Email: yumeng_zhu@zju.edu.cn | yumeng.zhu21@gmail.com</p>
                 <p>GitHub: <a href="https://github.com/Yumeng-Zhu">Yumeng-Zhu</a></p>
             </section>
-            
+
             <footer>
                 <p>&copy; 2025 Yumeng. All rights reserved.</p>
             </footer>
-        </div>
+        </main>
     </div>
 </body>
 </html>
