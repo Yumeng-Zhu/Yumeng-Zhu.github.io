@@ -1,63 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yumeng's Homepage</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <!-- Left-side Navigation -->
-        <nav class="nav-bar">
-            <button class="nav-toggle">☰</button>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="cv.pdf" target="_blank">CV</a></li> <!-- Replace with actual CV file -->
-            </ul>
-        </nav>
+    <title>Yumeng Zhu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
-        <!-- Main Content -->
-        <div class="content center">
-            <header>
-                <h1>Yumeng Zhu</h1>
-                <h3>PhD in Educational Technology</h3>
-                <img src="avatar.jpg" alt="Avatar" class="avatar"> <!-- Replace with actual image path -->
-            </header>
-            
-            <section id="about">
-                <h2>About Me</h2>
-                <p>Welcome to my homepage! </p>
-                <p>I am currently a PhD student at Zhejiang University and a recognized visiting PhD student at the University of Oxford. </p>
-                <p>My research focuses on empowering children through EdTech and using GenAI-based scaffolding tools to support students' project-based learning (PBL) in STEAM.</p>
-                <p>I will graduate in June 2026 and am actively seeking job opportunities!</p>
-            </section>
-            
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>This section is currently under construction.</li>
-                    
-                    <li>Please find out more latest publications on my <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN">Google Scholar Homepage.</a></li>
-                    <!-- <li><a href="#">Interactive Gamebook</a> - A digital storytelling project with interactive elements.</li> -->
-                    <!-- <li><a href="#">Middle School IT Projects</a> - Using AI to assist students in learning.</li>
-                    <li><a href="#">Personal Research</a> - Exploring goal orientation and task value in education.</li> -->
-                </ul>
-            </section>
-            
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Email: yumeng_zhu@zju.edu.cn | yumeng.zhu21@gmail.com</p>
-                <p>GitHub: <a href="https://github.com/Yumeng-Zhu">Yumeng-Zhu</a></p>
-            </section>
-            
-            <footer>
-                <p>&copy; 2025 Yumeng. All rights reserved.</p>
-            </footer>
+        body {
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2ecc71;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .photo {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .photo img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .content {
+            flex: 2;
+        }
+
+        h1 {
+            color: #2ecc71;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .email {
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #2ecc71;
+            font-weight: 600;
+        }
+
+        .job-notice {
+            background-color: #e8f8f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            border-left: 4px solid #2ecc71;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .photo {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Publication</a>
+        <a href="#">CV</a>
+    </nav>
+
+    <div class="container">
+        <div class="photo">
+            <!-- Placeholder for photo - replace with actual image -->
+            <img src="/avatar.jpg" alt="Yumeng Zhu">
+        </div>
+
+        <div class="content">
+            <h1>Yumeng Zhu</h1>
+            <h2>浙江大学 Zhejiang University</h2>
+
+            <div class="email">yumeng_zhu(at)zju.edu.cn</div>
+
+            <p>I'm a PhD candidate at <span class="highlight">Zhejiang University</span>, College of Education,
+                supervised by Yan Li, and co-supervised by Fei Wu, Wenzhi Chen, and Xuesong Zhai.</p>
+
+            <p>I am currently a visiting PhD student at <span class="highlight">University of Oxford</span>, Department
+                of Computer Science, Human-Centered Computing Group, supervised by Jun Zhao.</p>
+
+            <p>My research explores the intersection of <span class="highlight">Educational Technology(EdTech)</span>,
+                <span class="highlight">Human-Computer Interaction (HCI)</span>, and <span class="highlight">AI
+                    Curriculum Design</span> — especially for early adolescent.
+            </p>
+
+            <p>I'm passionate about empowering children, families, and educators in EdTech to protect their <span
+                    class="highlight">digital autonomy</span>. I have a stats background, embrace mixed-methods
+                research, and am currently learning to fine-tune LLM toolkits like <span
+                    class="highlight">LangChain</span>.</p>
+
+            <div class="job-notice">
+                I am looking for Job opportunities starting July 2026. Feel free to reach out if you're hiring!
+            </div>
         </div>
     </div>
 </body>
+
 </html>
