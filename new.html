@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yumeng Zhu</title>
+    <title>News Updates</title>
     <style>
         :root {
             --green: #639176;
             --green-light: #e8f8f0;
             --blue: #407fa9;
             --gray: #333;
+            --green-dark: #4a6f5c;
         }
 
         * {
@@ -35,7 +36,7 @@
             gap: 30px;
             border-bottom: 1px solid #eee;
             padding-bottom: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             position: sticky;
             top: 0;
             background: white;
@@ -159,11 +160,46 @@
                 text-align: left;
             }
         }
+
+        .news-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid var(--green);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .news-item h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--green-dark);
+        }
+
+        .news-meta {
+            font-size: 0.9rem;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+
+        .news-content p {
+            margin: 0.5rem 0;
+        }
+
+        .news-content a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
     </style>
+
 </head>
 
 <body>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">Publications</a>
@@ -171,52 +207,31 @@
         <a href="new.html">News</a>
     </nav>
 
-    <div class="container">
-        <div class="content">
-            <div class="intro">
-                <div class="intro-text">
-                    <h1>Yumeng Zhu</h1>
-                    <h2>PhD Candidate at Zhejiang University</h2>
-                    <div class="email">yumeng_zhu (at) zju.edu.cn</div>
-                </div>
-
-                <div class="photo">
-                    <img src="avatar.jpg" alt="Yumeng Zhu" />
-                </div>
-            </div>
-
-
-            <p>
-                Hi! I am a PhD candidate at <span class="highlight">Zhejiang University, College of Education</span>
-                (graduating
-                in June 2026). I am supervised by
-                <a href="https://person.zju.edu.cn/en/yanli" target="_blank">Yan Li</a> and co-supervised by
-                <a href="https://person.zju.edu.cn/en/wufei" target="_blank">Fei Wu</a>,
-                <a href="https://person.zju.edu.cn/en/0092215" target="_blank">Wenzhi Chen</a>, and
-                <a href="https://person.zju.edu.cn/en/0019252" target="_blank">Xuesong Zhai</a>.
+    <!-- News Item 1 -->
+    <div class="news-item">
+        <h2>New Preprint on AI Literacy Published</h2>
+        <div class="news-meta">By Yumeng Zhu · July 24, 2025</div>
+        <div class="news-content">
+            <p>AI literacy is a vital topic in today’s rapidly evolving digital landscape. Motivated by
+                a shared curiosity to demystify AI literacy, I’m thrilled to have collaborated with
+                <strong>Samantha-Kaye Johnston</strong>, <strong>Ge Wang</strong>, and <strong>Yan Li</strong> on this
+                paper.
             </p>
-
-            <p>
-                I was a visiting PhD student at
-                <span class="highlight">Oxford University, Department of Computer Science, Human-Centered Computing
-                    Group</span>,
-                supervised by <a href="https://www.cs.ox.ac.uk/people/jun.zhao/" target="_blank">Jun Zhao</a> during
-                2022-2023.
-            </p>
-
-            <p> My research lies at the intersection of Educational Technology (EdTech), Human-Computer Interaction
-                (HCI), and AI Curriculum Design, with a particular focus on supporting early adolescents' formal
-                learning. </p>
-            <p> I am deeply committed to designing EdTech tools and learning experiences that empower children,
-                families, and educators by promoting both learning autonomy and digital agency. With a strong foundation
-                in statistics, I apply mixed-methods research to generate nuanced insights, and I am actively exploring
-                large language model (LLM) toolkits such as LangChain to develop intelligent, education-focused
-                solutions. </p>
-
-            <div class="job-notice">
-                I am looking for job opportunities starting July 2026. Feel free to reach out if you're hiring!
-            </div>
+            <p><strong>Our preprint reviews how AI literacy is addressed across diverse learning contexts.</strong> We’d
+                love to hear
+                your thoughts — feedback and suggestions are more than welcome! 😊</p>
+            <p>👉 <a href="https://osf.io/c5stm_v1" target="_blank">Read the preprint here</a></p>
         </div>
+    </div>
+
+    <!-- News Item 2 -->
+    <div class="news-item">
+        <h2>More News Coming Soon</h2>
+        <!-- <div class="news-meta">xx</div>
+        <div class="news-content">
+            <p>[Brief description of the news item.]</p>
+            <p>👉 <a href="[URL]" target="_blank">Read more</a></p> -->
+    </div>
     </div>
 
 </body>
