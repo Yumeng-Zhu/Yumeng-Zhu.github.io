@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>朱雨萌</title>
+    <style>
+        :root {
+            --green: #639176;
+            --green-light: #e8f8f0;
+            --blue: #407fa9;
+            --gray: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+        }
+
+        body {
+            background: rgba(255, 255, 255, 0.767);
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: var(--green);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        h1 {
+            color: var(--green);
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .job-notice {
+            background-color: var(--green-light);
+            padding: 18px 20px;
+            border-left: 5px solid var(--green);
+            border-radius: 6px;
+            margin-top: 3px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            flex: 1 1 300px;
+        }
+
+        .photo {
+            flex: 0 0 300px;
+            max-width: 300px;
+        }
+
+        .photo img {
+            width: 100%;
+            border: 3px solid #639176;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="menu">
+            <a href="index_cn.html">主页</a>
+            <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">学术成果</a>
+            <a href="cv.pdf" target="_blank">简历</a>
+            <a href="new_cn.html">新闻</a>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="location.href='index_en.html'">English</button>
+            <button class="lang-btn" onclick="location.href='index_cn.html'">中文</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="job-notice">
+                我正在寻找 2026 年 7 月开始的工作机会，如果您正在招聘，欢迎联系我！
+            </div>
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>朱雨萌</h1>
+                    <h2>浙江大学博士研究生</h2>
+                    <div class="email">yumeng_zhu (at) zju.edu.cn</div>
+                </div>
+
+                <div class="photo">
+                    <img src="avatar.jpg" alt="朱雨萌" />
+                </div>
+            </div>
+
+            <p>
+                您好！我是 <span class="highlight">浙江大学教育学院</span> 的一名博士研究生（预计 2026 年 6 月毕业）。导师为
+                <a href="https://person.zju.edu.cn/yanli" target="_blank">李艳</a> 教授、
+                <a href="https://person.zju.edu.cn/wufei" target="_blank">吴飞</a> 教授、
+                <a href="https://person.zju.edu.cn/0092215" target="_blank">陈文智</a> 教授，以及
+                <a href="https://person.zju.edu.cn/0019252" target="_blank">翟雪松</a> 特聘研究员。
+            </p>
+
+            <p>
+                我曾在 2022-2023 年期间作为访问博士生在
+                <span class="highlight">牛津大学计算机科学系人本计算组</span> 学习，导师为
+                <a href="https://www.cs.ox.ac.uk/people/jun.zhao/" target="_blank">Jun Zhao</a> 研究员。
+            </p>
+
+            <p> 我关注智能教育领域，开展结合教育技术（EdTech）、人机交互（HCI）和课程设计三个领域的交叉研究，特别关注支持青少年的学习设计与技术支持。 </p>
+            <p> 我致力于设计能够赋能儿童、家庭和教育工作者的教育技术工具和学习体验，以促进学习自主性和数字自主性。基于扎实的统计学背景，我采用混合研究方法生成细致的洞察，并积极探索包括 LangChain
+                在内的大语言模型（LLM）工具包，用于开发面向教育的智能化解决方案。 </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

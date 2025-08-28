@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最新消息</title>
+    <style>
+        :root {
+            --green: #639176;
+            --green-light: #e8f8f0;
+            --blue: #407fa9;
+            --gray: #333;
+            --green-dark: #4a6f5c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+        }
+
+        body {
+            background: white;
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: var(--green);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        h1 {
+            color: var(--green);
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .job-notice {
+            background-color: var(--green-light);
+            padding: 18px 20px;
+            border-left: 5px solid var(--green);
+            border-radius: 6px;
+            margin-top: 30px;
+            font-weight: 500;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 0px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            flex: 1 1 300px;
+        }
+
+        .photo {
+            flex: 0 0 300px;
+            max-width: 300px;
+        }
+
+        .photo img {
+            width: 100%;
+            border: 3px solid #639176;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                text-align: left;
+            }
+        }
+
+        .news-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid var(--green);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .news-item h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--green-dark);
+        }
+
+        .news-meta {
+            font-size: 0.9rem;
+            color: var(--green-dark);
+            margin-bottom: 1rem;
+        }
+
+        .news-content p {
+            margin: 0.5rem 0;
+        }
+
+        .news-content a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <a href="index_cn.html">主页</a>
+            <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">学术成果</a>
+            <a href="cv.pdf" target="_blank">简历</a>
+            <a href="new_cn.html">新闻</a>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="location.href='news_en.html'">English</button>
+            <button class="lang-btn" onclick="location.href='news_cn.html'">中文</button>
+        </div>
+    </nav>
+    <!-- 新闻 1 -->
+    <div class="news-item">
+        <h2>关于人工智能素养的新预印本论文发布</h2>
+        <div class="news-meta">作者：朱雨萌 · 2025年7月24日</div>
+        <div class="news-content">
+            <p>人工智能素养是当今快速发展的数字环境中的一个重要话题。出于共同的好奇心和推动理解人工智能素养的愿望，我很高兴能与
+                <strong>Samantha-Kaye Johnston</strong>、<strong>Ge Wang</strong> 和 <strong>李艳老师</strong> 合作完成这篇论文。
+            </p>
+            <p><strong>我们的预印本论文回顾了人工智能素养在不同学习情境中的应用与研究。</strong> 我们非常期待您的意见和建议！😊</p>
+            <p>👉 <a href="https://osf.io/c5stm_v1" target="_blank">点击这里阅读预印本</a></p>
+        </div>
+    </div>
+
+    <!-- 新闻 2 -->
+    <div class="news-item">
+        <h2>更多信息即将发布</h2>
+        <!-- <div class="news-meta">xx</div>
+        <div class="news-content">
+            <p>[新闻的简要描述]</p>
+            <p>👉 <a href="[URL]" target="_blank">阅读更多</a></p> -->
+    </div>
+    </div>
+
+</body>
+
+</html>

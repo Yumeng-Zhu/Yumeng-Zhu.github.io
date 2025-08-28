@@ -21,7 +21,7 @@
         }
 
         body {
-            background: white;
+            background: rgba(255, 255, 255, 0.767);
             color: var(--gray);
             line-height: 1.75;
             max-width: 1100px;
@@ -31,47 +31,61 @@
 
         nav {
             display: flex;
-            justify-content: flex-end;
-            gap: 30px;
+            justify-content: space-between;
+            /* push left vs right sections apart */
+            align-items: center;
             border-bottom: 1px solid #eee;
             padding-bottom: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             position: sticky;
             top: 0;
             background: white;
             z-index: 10;
         }
 
-        nav a {
+        /* menu links group */
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
             text-decoration: none;
             font-weight: 500;
             color: var(--gray);
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
+        .menu a:hover {
             color: var(--green);
         }
 
-        .container {
+        /* language buttons group */
+        .lang-switch {
             display: flex;
-            flex-direction: row;
-            gap: 50px;
-            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .photo {
-            flex: 1 1 200px;
-            max-width: 250px;
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .photo img {
-            width: 100%;
-            border: 3px solid var(--green);
+        .lang-btn:hover {
+            background: var(--green-light);
+            color: var(--green);
         }
 
-        .content {
-            flex: 3 1 400px;
+
+        nav a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color 0.3s ease;
         }
 
         h1 {
@@ -116,7 +130,8 @@
             padding: 18px 20px;
             border-left: 5px solid var(--green);
             border-radius: 6px;
-            margin-top: 30px;
+            margin-top: 3px;
+            margin-bottom: 20px;
             font-weight: 500;
         }
 
@@ -125,7 +140,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
-            margin-bottom: 0px;
+            margin-bottom: 10px;
             flex-wrap: wrap;
         }
 
@@ -165,14 +180,26 @@
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">Publications</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-        <a href="new.html">News</a>
+        <div class="menu">
+            <a href="index_en.html">Home</a>
+            <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN"
+                target="_blank">Publications</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+            <a href="new_en.html">News</a>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="location.href='index_en.html'">English</button>
+            <button class="lang-btn" onclick="location.href='index_cn.html'">中文</button>
+        </div>
     </nav>
+
 
     <div class="container">
         <div class="content">
+            <div class="job-notice">
+                I am looking for job opportunities starting July 2026. Feel free to reach out if you're hiring!
+            </div>
             <div class="intro">
                 <div class="intro-text">
                     <h1>Yumeng Zhu</h1>
@@ -184,7 +211,6 @@
                     <img src="avatar.jpg" alt="Yumeng Zhu" />
                 </div>
             </div>
-
 
             <p>
                 Hi! I am a PhD candidate at <span class="highlight">Zhejiang University, College of Education</span>
@@ -199,23 +225,23 @@
             <p>
                 I was a visiting PhD student at
                 <span class="highlight">Oxford University, Department of Computer Science, Human-Centered Computing
-                    Group</span>,
-                supervised by <a href="https://www.cs.ox.ac.uk/people/jun.zhao/" target="_blank">Jun Zhao</a> during
-                2022-2023.
+                    Group</span>, supervised by <a href="https://www.cs.ox.ac.uk/people/jun.zhao/" target="_blank">Jun
+                    Zhao</a>
+                during 2022-2023.
             </p>
 
             <p> My research lies at the intersection of Educational Technology (EdTech), Human-Computer Interaction
-                (HCI), and AI Curriculum Design, with a particular focus on supporting early adolescents' formal
-                learning. </p>
+                (HCI), and
+                AI Curriculum Design, with a particular focus on supporting early adolescents' formal learning. </p>
             <p> I am deeply committed to designing EdTech tools and learning experiences that empower children,
-                families, and educators by promoting both learning autonomy and digital agency. With a strong foundation
-                in statistics, I apply mixed-methods research to generate nuanced insights, and I am actively exploring
-                large language model (LLM) toolkits such as LangChain to develop intelligent, education-focused
-                solutions. </p>
+                families, and
+                educators by promoting both learning autonomy and digital agency. With a strong foundation in
+                statistics, I
+                apply mixed-methods research to generate nuanced insights, and I am actively exploring large language
+                model
+                (LLM) toolkits such as LangChain to develop intelligent, education-focused solutions. </p>
 
-            <div class="job-notice">
-                I am looking for job opportunities starting July 2026. Feel free to reach out if you're hiring!
-            </div>
+
         </div>
     </div>
 

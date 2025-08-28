@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yumeng Zhu</title>
+    <style>
+        :root {
+            --green: #639176;
+            --green-light: #e8f8f0;
+            --blue: #407fa9;
+            --gray: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+        }
+
+        body {
+            background: rgba(255, 255, 255, 0.767);
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* push left vs right sections apart */
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+
+        /* menu links group */
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: var(--green);
+        }
+
+        /* language buttons group */
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+
+        nav a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color 0.3s ease;
+        }
+
+        h1 {
+            color: var(--green);
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            font-weight: 500;
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .job-notice {
+            background-color: var(--green-light);
+            padding: 18px 20px;
+            border-left: 5px solid var(--green);
+            border-radius: 6px;
+            margin-top: 3px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            flex: 1 1 300px;
+        }
+
+        .photo {
+            flex: 0 0 300px;
+            max-width: 300px;
+        }
+
+        .photo img {
+            width: 100%;
+            border: 3px solid #639176;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="menu">
+            <a href="index_en.html">Home</a>
+            <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN"
+                target="_blank">Publications</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+            <a href="new_en.html">News</a>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="location.href='index_en.html'">English</button>
+            <button class="lang-btn" onclick="location.href='index_cn.html'">中文</button>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="content">
+            <div class="job-notice">
+                I am looking for job opportunities starting July 2026. Feel free to reach out if you're hiring!
+            </div>
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>Yumeng Zhu</h1>
+                    <h2>PhD Candidate at Zhejiang University</h2>
+                    <div class="email">yumeng_zhu (at) zju.edu.cn</div>
+                </div>
+
+                <div class="photo">
+                    <img src="avatar.jpg" alt="Yumeng Zhu" />
+                </div>
+            </div>
+
+            <p>
+                Hi! I am a PhD candidate at <span class="highlight">Zhejiang University, College of Education</span>
+                (graduating
+                in June 2026). I am supervised by
+                <a href="https://person.zju.edu.cn/en/yanli" target="_blank">Yan Li</a> and co-supervised by
+                <a href="https://person.zju.edu.cn/en/wufei" target="_blank">Fei Wu</a>,
+                <a href="https://person.zju.edu.cn/en/0092215" target="_blank">Wenzhi Chen</a>, and
+                <a href="https://person.zju.edu.cn/en/0019252" target="_blank">Xuesong Zhai</a>.
+            </p>
+
+            <p>
+                I was a visiting PhD student at
+                <span class="highlight">Oxford University, Department of Computer Science, Human-Centered Computing
+                    Group</span>, supervised by <a href="https://www.cs.ox.ac.uk/people/jun.zhao/" target="_blank">Jun
+                    Zhao</a>
+                during 2022-2023.
+            </p>
+
+            <p> My research lies at the intersection of Educational Technology (EdTech), Human-Computer Interaction
+                (HCI), and
+                AI Curriculum Design, with a particular focus on supporting early adolescents' formal learning. </p>
+            <p> I am deeply committed to designing EdTech tools and learning experiences that empower children,
+                families, and
+                educators by promoting both learning autonomy and digital agency. With a strong foundation in
+                statistics, I
+                apply mixed-methods research to generate nuanced insights, and I am actively exploring large language
+                model
+                (LLM) toolkits such as LangChain to develop intelligent, education-focused solutions. </p>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
