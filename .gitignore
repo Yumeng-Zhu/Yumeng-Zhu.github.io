@@ -1,14 +1,7 @@
 # 忽略单个文件
-jd.html
-
-# # 忽略某类文件
-# *.log
-# *.tmp
+/jd.html
 
 # 忽略目录
 /jd_images/
 /jd_videos/
 /jd_files/
-
-# # 忽略特定路径的文件
-# src/secret_keys/
