@@ -30,10 +30,11 @@
             padding: 40px 20px;
         }
 
+
         nav {
             display: flex;
-            justify-content: flex-end;
-            gap: 30px;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #eee;
             padding-bottom: 20px;
             margin-bottom: 20px;
@@ -43,36 +44,39 @@
             z-index: 10;
         }
 
-        nav a {
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
             text-decoration: none;
             font-weight: 500;
             color: var(--gray);
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
+        .menu a:hover {
             color: var(--green);
         }
 
-        .container {
+        .lang-switch {
             display: flex;
-            flex-direction: row;
-            gap: 50px;
-            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .photo {
-            flex: 1 1 200px;
-            max-width: 250px;
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--green);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .photo img {
-            width: 100%;
-            border: 3px solid var(--green);
-        }
-
-        .content {
-            flex: 3 1 400px;
+        .lang-btn:hover {
+            background: var(--green-light);
+            color: var(--green);
         }
 
         h1 {
@@ -201,11 +205,20 @@
 
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN" target="_blank">Publications</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-        <a href="new.html">News</a>
+        <div class="menu">
+            <a href="index_en.html">Home</a>
+            <a href="https://scholar.google.com.hk/citations?user=quBcbt4AAAAJ&hl=zh-CN"
+                target="_blank">Publications</a>
+            <a href="cv.pdf" target="_blank">CV</a>
+            <a href="news_en.html">News</a>
+        </div>
+
+        <div class="lang-switch">
+            <button class="lang-btn" onclick="location.href='news_en.html'">English</button>
+            <button class="lang-btn" onclick="location.href='news_cn.html'">中文</button>
+        </div>
     </nav>
+
 
     <!-- News Item 1 -->
     <div class="news-item">
